@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Updates &amp; Newsletter — Radhe Dhokla</title>
+<meta name="description" content="Company updates, investor notes, new outlets and menu news from Radhe Dhokla. Subscribe to the newsletter.">
+<meta name="theme-color" content="#ED3237"><link rel="icon" href="assets/img/logo-current.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500;600;700;800&family=Freeman&family=Hind+Vadodara:wght@400;500;600&family=Shrikhand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="updates">
+<div id="site-header"></div>
+
+<section class="page-hero" style="min-height:52svh">
+  <div class="media"><img src="assets/img/green-tadka-khaman.webp" alt=""></div>
+  <div class="container">
+    <span class="eyebrow" style="color:var(--sand)">Updates · ન્યૂઝલેટર</span>
+    <h1 class="h1" style="margin:14px 0 18px">What's new<br>at the counter.</h1>
+    <p class="lead" style="color:rgba(251,242,228,.85)">New outlets, menu changes, company and investor updates, and the policies we are putting in place as we grow.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="filters" id="filters"><button class="on" data-f="all">All</button><button data-f="company">Company</button><button data-f="investors">Investors</button><button data-f="outlets">Outlets</button><button data-f="menu">Menu</button><button data-f="sevanand">Sevanand</button><button data-f="policy">Policy</button></div>
+    <div class="posts" id="posts"></div>
+  </div>
+</section>
+
+<section class="section bg-paper" id="newsletter">
+  <div class="container">
+    <div class="newsletter" data-reveal>
+      <div><span class="eyebrow" style="color:var(--white)">Newsletter</span><h2 class="h2" style="margin:12px 0 10px">One short note<br>whenever something changes.</h2><p style="opacity:.9">Company updates, policy changes, new cities and seasonal dishes — written by the team, sent only when there is news.</p></div>
+      <div><form onsubmit="event.preventDefault();this.querySelector('input').value='';this.nextElementSibling.textContent='Thanks! You are on the list.'"><input type="email" required placeholder="Your email"><button class="btn btn-maroon" type="submit">Subscribe</button></form><p class="note">We never share your email. Unsubscribe any time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="investors">
+  <div class="container split">
+    <div class="copy" data-reveal>
+      <span class="eyebrow">For investors</span>
+      <h2 class="h2">A family business,<br>moving toward the market.</h2>
+      <p class="lead">Radhe Dhokla's promoters have taken a majority stake in BSE-listed Shantai Industries Limited, and the board has proposed renaming the company <b>Radhe Dhokla Retail Limited</b> and adding food processing, packaging and food-service operations to its charter. Official filings are published on the BSE; this page carries the plain-language version.</p>
+      <ul class="pill-list"><li>Exchange: BSE · ticker SHANTAI (proposed: Radhe Dhokla Retail Ltd)</li><li>Investor relations: <a href="mailto:investors@radhedhokla.in" style="color:var(--red);font-weight:700">investors@radhedhokla.in</a></li><li>Filings and announcements: bseindia.com</li></ul>
+    </div>
+    <div class="media land" data-reveal><video autoplay muted loop playsinline poster="assets/video/v08-outlet.jpg"><source src="assets/video/v08-outlet.mp4" type="video/mp4"></video></div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="assets/js/data.js"></script><script src="assets/js/main.js"></script><script src="assets/js/menu-app.js"></script>
+<script>
+(function(){
+  var POSTS=[
+    {f:'investors',tag:'Investor update',t:'Board proposes the name Radhe Dhokla Retail Limited',d:'10 Aug 2026',p:'The board of Shantai Industries approved four director appointments and proposed renaming the company Radhe Dhokla Retail Limited, with food processing, packaging and food-service operations added to the Memorandum of Association. Both are subject to shareholder and regulatory approval.',m:'video',src:'v08-outlet',feature:true},
+    {f:'investors',tag:'Investor update',t:'Promoters acquire a 74.4% stake in Shantai Industries',d:'2026',p:'Radhe Dhokla Private Limited and its promoter family entered into a share purchase agreement to acquire a 74.40% stake in BSE-listed Shantai Industries Limited, the first step toward a listed food-retail company.',m:'img',src:'butter-pav-bhaji'},
+    {f:'outlets',tag:'New outlet',t:'Six cities, eighteen counters',d:'2026',p:'With Navsari, Vadodara, Anand, Ahmedabad and five Mumbai neighbourhoods, Radhe now runs 18 outlets. Every one has its own WhatsApp ordering line.',m:'video',src:'v09-pack'},
+    {f:'menu',tag:'Menu',t:'Desi Ghee Parampara: a range cooked only in ghee',d:'2025',p:'Ghee Tadka Dal, Shahi Ghee Paneer, Ghee Wali Veg Handi and Shahi Ghee Dum Biryani, all by the kilo, for the days a parcel should feel like a feast.',m:'img',src:'butter-corn-dhokla'},
+    {f:'policy',tag:'Policy',t:'How we pack: 300, 500 and 1000 ml, weighed in front of you',d:'2025',p:'Farsan parcels have a 250 g minimum and are weighed at the counter. Gravies and rice are packed by container. 5% GST is added to every bill. We publish prices city by city because they differ by outlet.',m:'img',src:'schezwan-tawa-dhokla'},
+    {f:'sevanand',tag:'Sevanand',t:'Sevanand launches: feed the hungry through Radhe',d:'9 Feb 2023',p:'Any good samaritan can book fresh, hot food for the needy at the Adajan (Surat) and Kandivali (Mumbai) outlets. Founder Kanaiyalal Pandav: “It is a matter of great pride for us to serve as a bridge between donors and the needy.”',m:'video',src:'v12-sevanand'},
+    {f:'company',tag:'Company',t:'The second generation joins the counter',d:'2015',p:'Jinesh and Priyanka Pandav join the family business. Sabzi, Chinese and pav bhaji are added and, for the first time, sold by the kilogram.',m:'video',src:'v11-1995'}
+  ];
+  var wrap=document.getElementById('posts');
+  function render(f){
+    wrap.innerHTML='';
+    POSTS.filter(function(p){return f==='all'||p.f===f}).forEach(function(p,i){
+      var media=p.m==='video'?'<video autoplay muted loop playsinline poster="assets/video/'+p.src+'.jpg"><source src="assets/video/'+p.src+'.mp4" type="video/mp4"></video>':'<img src="assets/img/'+p.src+'.webp" alt="" loading="lazy">';
+      wrap.insertAdjacentHTML('beforeend','<article class="post'+(p.feature&&f==='all'?' feature':'')+'"><div class="thumb">'+media+'</div><div class="body"><span class="tag">'+p.tag+'</span><h4>'+p.t+'</h4><p>'+p.p+'</p><time>'+p.d+'</time></div></article>');
+    });
+    wrap.querySelectorAll('video').forEach(function(v){v.muted=true;var r=v.play();if(r&&r.catch)r.catch(function(){})});
+  }
+  render('all');
+  document.getElementById('filters').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;document.querySelectorAll('#filters button').forEach(function(x){x.classList.toggle('on',x===b)});render(b.dataset.f);});
+})();
+</script>
+</body>
+</html>

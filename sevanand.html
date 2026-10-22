@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Sevanand — Feed someone today, through Radhe Dhokla</title>
+<meta name="description" content="Sevanand is Radhe Dhokla's giving initiative: book fresh, hot Gujarati food for the needy at a Sevanand outlet and we cook, pack and serve it the same day.">
+<meta name="theme-color" content="#5F7F45"><link rel="icon" href="assets/img/logo-current.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500;600;700;800&family=Freeman&family=Hind+Vadodara:wght@400;500;600&family=Shrikhand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="sevanand">
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="media"><video autoplay muted loop playsinline poster="assets/video/v12-sevanand.jpg"><source src="assets/video/v12-sevanand.mp4" type="video/mp4"></video></div>
+  <div class="container">
+    <span class="eyebrow" style="color:var(--sand)">Sevanand · સેવાનંદ</span>
+    <h1 class="h1" style="margin:14px 0 18px">The joy of serving.<br>Made simple.</h1>
+    <p class="lead" style="color:rgba(251,242,228,.85)">Sevanand connects people who want to feed the hungry with the people who need a hot meal. You book it. We cook it, pack it and serve it — fresh, the same day.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="copy" data-reveal>
+      <span class="eyebrow">Why we started it</span>
+      <h2 class="h2">A bridge between<br>donors and the needy.</h2>
+      <p class="lead">Feeding people is one of the oldest Gujarati traditions. But doing it well — fresh food, served hot, at the right place — takes a kitchen. Radhe already has one in every city. In February 2023 we opened it up: anyone can now sponsor a day of meals, and our team does the rest.</p>
+      <blockquote class="quote" style="margin-top:26px">“We are giving one person an opportunity to feed the hungry every day. It is a matter of great pride for us to serve as a bridge between donors and the needy.”</blockquote>
+      <div class="by">— Kanaiyalal Pandav, Founder</div>
+    </div>
+    <div class="media" data-reveal><video autoplay muted loop playsinline poster="assets/video/v10-thali.jpg"><source src="assets/video/v10-thali.mp4" type="video/mp4"></video></div>
+  </div>
+</section>
+
+<section class="section bg-green">
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">How it works</span><h2 class="h2">Three steps. One good day.</h2></div><p class="lead">Any individual, family or business can take part — a birthday, an anniversary, a company milestone, or simply a Tuesday.</p></div>
+    <div class="how">
+      <div class="step"><div class="n">01</div><h4>Choose a Sevanand outlet</h4><p>Sevanand currently runs from our Adajan outlet in Surat and our Kandivali outlet in Mumbai. More outlets are being added.</p></div>
+      <div class="step"><div class="n">02</div><h4>Book the meals</h4><p>Tell us how many people you want to feed and on which day. Khaman, dhokla, patra and full meals — fresh, hot and nutritious.</p></div>
+      <div class="step"><div class="n">03</div><h4>We cook, pack and serve</h4><p>Our team prepares the food that morning, packs it hot and serves it to those who need it. You can be there, or we can send you a note when it is done.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-paper">
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Book a Sevanand day</span><h2 class="h2">Pick an outlet and message us.</h2></div><p class="lead">Each message opens a ready-made WhatsApp note to the Sevanand coordinator at that outlet. They will confirm the date, the number of meals and the amount.</p></div>
+    <div class="outlets" id="sevOutlets" style="grid-template-columns:repeat(2,1fr)"></div>
+    <p style="text-align:center;margin-top:24px;color:var(--ink-soft);font-size:14px">Want to run Sevanand from another city? Write to the central line: <a href="https://wa.me/918140000161" style="color:var(--red);font-weight:700">+91 81400 00161</a></p>
+  </div>
+</section>
+
+<section class="section statement">
+  <div class="container">
+    <h2 class="h2"><span class="gu">સ્વાદ સાથે સંબંધ… અને સેવા.</span><span data-words>Taste builds relationships. Service builds a community.</span></h2>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="assets/js/data.js"></script><script src="assets/js/main.js"></script><script src="assets/js/menu-app.js"></script>
+<script>
+(function(){
+  var el=document.getElementById('sevOutlets');
+  RD.outlets.filter(function(o){return o.sevanand}).forEach(function(o){
+    var c=RD.cities[o.city];
+    var wa='https://wa.me/'+o.phone+'?text='+encodeURIComponent('Namaste Radhe Dhokla '+o.name+' 🙏\nI would like to book a Sevanand day.\nNumber of people to feed: ___\nPreferred date: ___\nOccasion (optional): ___\nPlease share the details and amount. Thank you!');
+    el.insertAdjacentHTML('beforeend','<div class="outlet"><div class="top"><b>'+o.name+', '+c.name+'</b><span class="rate" style="background:var(--green)">Sevanand</span></div><p>'+o.address+'</p><div class="hrs">'+o.hours+'</div><div class="acts"><a class="wa" href="'+wa+'" target="_blank" rel="noopener">Book on WhatsApp</a><a href="tel:+'+o.phone+'">'+o.display+'</a></div></div>');
+  });
+})();
+</script>
+</body>
+</html>
