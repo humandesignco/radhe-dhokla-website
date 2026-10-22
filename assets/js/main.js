@@ -56,7 +56,7 @@
   var nav = document.getElementById("nav");
   var solidAt = document.querySelector(".hero, .page-hero") ? 60 : 0;
   function onScroll() { nav.classList.toggle("solid", window.scrollY > solidAt); }
-  onScroll(); window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll(); window.addEventListener("scroll", onScroll, { passive: true }); if (lenis) lenis.on("scroll", onScroll);
   var burger = document.getElementById("burger"), mm = document.getElementById("mobileMenu");
   burger.addEventListener("click", function () {
     var open = !document.body.classList.contains("menu-open");
