@@ -425,8 +425,14 @@ footer{background:var(--maroon);color:var(--white);padding:clamp(60px,8vw,110px)
   .journey-media::after{background:linear-gradient(180deg,rgba(78,13,17,.2) 0%,rgba(78,13,17,.55) 50%,rgba(78,13,17,.9) 100%)}
   .journey-copy{justify-content:flex-end;padding-bottom:90px}
   .journey-steps{min-height:280px}
-  .journey-end .grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .journey-end .grid figure:nth-child(n+7){display:none}
+  .journey-end{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:22px;padding:0 var(--gutter)}
+  .journey-end .grid{grid-template-columns:repeat(2,1fr);gap:10px;width:min(420px,100%);margin-top:var(--nav-h)}
+  .journey-end .grid figure{aspect-ratio:1}
+  .journey-end .grid figure:nth-child(n+5){display:none}
+  .journey-end .cap{position:static;padding:0 10px}
+  .journey-end .cap .gu{font-size:clamp(22px,6vw,30px)}
+  .bento .card.text .gu{font-size:clamp(20px,5vw,26px)}
+  .bento .card.text p{display:none}
   .bento{grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(140px,34vw,220px)}
   .bento .card{grid-column:span 3}
   .bento .card.big{grid-column:span 6}

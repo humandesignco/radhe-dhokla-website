@@ -138,7 +138,7 @@
         var p = st.progress, idx = Math.min(n - 1, Math.floor(p * total));
         var wrap = p > n / total;
         if (!wrap) { setStep(idx); end.classList.remove("on"); journey.querySelector(".journey-copy").style.opacity = 1; }
-        else { end.classList.add("on"); journey.querySelector(".journey-copy").style.opacity = 0; }
+        else { end.classList.add("on"); journey.querySelector(".journey-copy").style.opacity = 0; bars.forEach(function (b) { b.classList.add("on"); }); }
         // media wraps into a rectangle for the wrap-up
         var t = Math.max(0, Math.min(1, (p - n / total) / (1 / total)));
         var sc = 1 - 0.14 * t, br = 36 * t;

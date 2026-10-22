@@ -155,12 +155,12 @@
     else if (d.go === "state") { state.stateId = null; state.cityId = null; state.outletId = null; state.view = "menu"; save(); render(); }
     else if (d.go === "city") { state.cityId = null; state.outletId = null; save(); render(); }
     else if (d.go === "menu") { state.view = "menu"; render(); }
-    else if (d.cat) { state.cat = d.cat; renderMenu(); body.scrollTop = 0; }
     else if (d.add) {
       var cat = RD.menu.find(function (m) { return m.id === d.cat; }), it = cat.items[d.i | 0], pr = priceOf(it);
       if (!state.cart[d.add]) state.cart[d.add] = { name: it.n, unit: RD.unitLabel[d.u] || d.u, price: pr[d.u], q: 0 };
       state.cart[d.add].q++; save(); renderMenuKeepScroll();
     }
+    else if (d.cat) { state.cat = d.cat; renderMenu(); body.scrollTop = 0; }
     else if (d.inc) { state.cart[d.inc].q++; save(); state.view === "cart" ? renderCart() : renderMenuKeepScroll(); }
     else if (d.dec) { if (--state.cart[d.dec].q <= 0) delete state.cart[d.dec]; save(); state.view === "cart" ? renderCart() : renderMenuKeepScroll(); }
     else if (t.id === "rdReview") { state.view = "cart"; render(); }
